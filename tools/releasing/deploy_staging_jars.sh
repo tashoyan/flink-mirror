@@ -41,7 +41,7 @@ cd ..
 
 echo "Deploying to repository.apache.org"
 
-COMMON_OPTIONS="-Prelease,docs-and-source -DskipTests -DretryFailedDeploymentCount=10 $CUSTOM_OPTIONS"
+COMMON_OPTIONS="-pl flink-rpc/flink-rpc-akka -am -Prelease,docs-and-source -DskipTests -DretryFailedDeploymentCount=10 $CUSTOM_OPTIONS"
 
 echo "Deploying Scala 2.11 version"
 $MVN clean install $COMMON_OPTIONS -Dscala-2.11
